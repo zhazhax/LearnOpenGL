@@ -39,7 +39,7 @@ int main()
     // glfw window creation
     // --------------------
     GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
-    if (window == NULL)
+    if (window == NULL)     //判断是否生成窗口
     {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
@@ -50,7 +50,7 @@ int main()
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))    //判断生成指针对象
     {
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
